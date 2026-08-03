@@ -1,0 +1,128 @@
+<!--
+  HINWEIS: Grunddaten sind ausgefüllt. Verbleibende Punkte (USt-ID, Streitschlichtung)
+  bitte noch prüfen bzw. ergänzen. Im Zweifel juristisch gegenchecken lassen
+  (z. B. via e-recht24.de oder eine Anwaltskanzlei), bevor die Seite live geht.
+-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum — Nyx Media</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { nyxbg: '#08080c', nyxsurface: '#0f0f16', nyxborder: '#232331',
+        gold: { DEFAULT: '#c9a24c', light: '#e8cf85' } },
+      fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['"Inter"', 'sans-serif'] },
+    }}
+  };
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<style>
+  .gold-gradient-text{background:linear-gradient(120deg,#e8cf85,#c9a24c);-webkit-background-clip:text;background-clip:text;color:transparent;}
+</style>
+</head>
+<body class="bg-nyxbg text-gray-300 font-sans antialiased">
+
+<header class="border-b border-nyxborder/60 px-6 py-6">
+  <div class="max-w-3xl mx-auto flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <svg viewBox="0 0 40 40" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="goldGradImp" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e8cf85"/>
+            <stop offset="50%" stop-color="#c9a24c"/>
+            <stop offset="100%" stop-color="#8f7431"/>
+          </linearGradient>
+        </defs>
+        <circle cx="20" cy="20" r="18.5" fill="none" stroke="url(#goldGradImp)" stroke-width="1"/>
+        <path d="M25 9.5 A11.5 11.5 0 1 0 25 30.5 A8.7 8.7 0 1 1 25 9.5 Z" fill="url(#goldGradImp)"/>
+        <circle cx="27.5" cy="12.5" r="1.4" fill="url(#goldGradImp)"/>
+      </svg>
+      <span class="font-serif text-lg tracking-[0.25em] text-white">NYX</span>
+    </a>
+    <a href="index.html" class="text-sm text-gray-400 hover:text-gold transition-colors">← Zurück zur Startseite</a>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 py-16">
+  <h1 class="font-serif text-3xl md:text-4xl text-white mb-10">Impressum</h1>
+
+  <div class="space-y-8 text-sm leading-relaxed text-gray-400">
+
+    <section>
+      <h2 class="text-white font-medium mb-2">Angaben gemäß § 5 TMG</h2>
+      <p>
+        Nyx Media (Einzelunternehmen)<br>
+        Inhaber: Felix Leon Koglin<br>
+        Buchenweg 3<br>
+        63486 Bruchköbel<br>
+        Deutschland
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-white font-medium mb-2">Vertreten durch</h2>
+      <p>Geschäftsführer: Felix Koglin</p>
+    </section>
+
+    <section>
+      <h2 class="text-white font-medium mb-2">Kontakt</h2>
+      <p>
+        Telefon: 0176 44762012<br>
+        E-Mail: hello@nyx-media.de
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-white font-medium mb-2">Registereintrag</h2>
+      <p>
+        Nyx Media wird als Einzelunternehmen geführt. Ein Handelsregistereintrag besteht nicht.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-white font-medium mb-2">Umsatzsteuer</h2>
+      <p>
+        Es liegt keine Umsatzsteuer-Identifikationsnummer vor.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-white font-medium mb-2">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>
+        Felix Leon Koglin<br>
+        Buchenweg 3, 63486 Bruchköbel
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-white font-medium mb-2">EU-Streitschlichtung</h2>
+      <p>
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" class="text-gold hover:underline">https://ec.europa.eu/consumers/odr/</a>.
+        Unsere E-Mail-Adresse finden Sie oben im Impressum.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-white font-medium mb-2">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+      <p>
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="border-t border-nyxborder/60 px-6 py-8 text-center text-xs text-gray-600">
+  © 2026 Nyx Media. Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>

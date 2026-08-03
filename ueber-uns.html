@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Über uns — Nyx Media</title>
+<meta name="description" content="Nyx Media ist eine Boutique-Agentur für 24/7 Chat-Management. Erfahren Sie, warum wir gegründet wurden und was uns von der Masse abhebt.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          nyxbg: '#08080c',
+          nyxsurface: '#0f0f16',
+          nyxcard: '#13131c',
+          nyxborder: '#232331',
+          gold: { DEFAULT: '#c9a24c', light: '#e8cf85', dark: '#8f7431' },
+          violet: { DEFAULT: '#6c63ff', light: '#948dff', dark: '#4a43b3' },
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans: ['"Inter"', 'sans-serif'],
+        },
+        boxShadow: {
+          gold: '0 0 40px -10px rgba(201,162,76,0.35)',
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #08080c; }
+  .bg-radial-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(108,99,255,0.14), transparent 60%),
+                radial-gradient(circle at 85% 20%, rgba(201,162,76,0.09), transparent 55%);
+  }
+  .gold-gradient-text {
+    background: linear-gradient(120deg, #e8cf85 0%, #c9a24c 45%, #8f7431 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .nav-blur { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,162,76,0.6), transparent);
+  }
+</style>
+</head>
+
+<body class="bg-nyxbg text-gray-200 font-sans antialiased">
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 nav-blur bg-nyxbg/70 border-b border-nyxborder/60">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3">
+        <svg viewBox="0 0 40 40" class="h-8 w-8 md:h-9 md:w-9" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldGradNavAbout" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#e8cf85"/>
+              <stop offset="50%" stop-color="#c9a24c"/>
+              <stop offset="100%" stop-color="#8f7431"/>
+            </linearGradient>
+          </defs>
+          <circle cx="20" cy="20" r="18.5" fill="none" stroke="url(#goldGradNavAbout)" stroke-width="1"/>
+          <path d="M25 9.5 A11.5 11.5 0 1 0 25 30.5 A8.7 8.7 0 1 1 25 9.5 Z" fill="url(#goldGradNavAbout)"/>
+          <circle cx="27.5" cy="12.5" r="1.4" fill="url(#goldGradNavAbout)"/>
+        </svg>
+        <span class="font-serif text-xl md:text-2xl tracking-[0.25em] text-white">NYX</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-10 text-sm tracking-wide text-gray-300">
+        <a href="index.html#leistungen" class="hover:text-gold transition-colors">Leistungen</a>
+        <a href="index.html#ablauf" class="hover:text-gold transition-colors">Ablauf</a>
+        <a href="index.html#warum-wir" class="hover:text-gold transition-colors">Warum Nyx</a>
+        <a href="index.html#faq" class="hover:text-gold transition-colors">FAQ</a>
+        <a href="ueber-uns.html" class="text-gold">Über uns</a>
+      </nav>
+
+      <a href="index.html#booking" class="hidden lg:inline-flex items-center gap-2 border border-gold/70 text-gold px-6 py-2.5 rounded-full text-sm tracking-wide hover:bg-gold hover:text-nyxbg transition-all duration-300">
+        Call buchen
+      </a>
+
+      <button id="menuBtn" class="lg:hidden text-gray-200" aria-label="Menü öffnen">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-nyxborder/60 bg-nyxbg/95 px-6 py-6 space-y-5 text-gray-300">
+    <a href="index.html#leistungen" class="block hover:text-gold">Leistungen</a>
+    <a href="index.html#ablauf" class="block hover:text-gold">Ablauf</a>
+    <a href="index.html#warum-wir" class="block hover:text-gold">Warum Nyx</a>
+    <a href="index.html#faq" class="block hover:text-gold">FAQ</a>
+    <a href="ueber-uns.html" class="block text-gold">Über uns</a>
+    <a href="index.html#booking" class="block text-center border border-gold text-gold px-6 py-2.5 rounded-full">Call buchen</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="relative bg-radial-glow pt-40 pb-20 px-6 lg:px-10 overflow-hidden">
+  <div class="max-w-3xl mx-auto text-center relative z-10">
+    <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-gold/90 mb-6">Über uns</p>
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight text-white mb-6">
+      Wenige Chatter.<br class="hidden sm:block">
+      <span class="gold-gradient-text">Volle Aufmerksamkeit.</span>
+    </h1>
+    <p class="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+      Nyx Media ist bewusst als Gegenentwurf zur Masse entstanden — als Boutique-Agentur,
+      die auf Qualität statt Quantität setzt.
+    </p>
+  </div>
+</section>
+
+<div class="divider-gold max-w-3xl mx-auto"></div>
+
+<!-- ============ GRÜNDERGESCHICHTE ============ -->
+<section class="py-20 px-6 lg:px-10">
+  <div class="max-w-3xl mx-auto">
+    <p class="uppercase tracking-[0.3em] text-xs text-violet-light mb-4 text-center">Wie alles begann</p>
+    <h2 class="font-serif text-2xl md:text-3xl text-white text-center mb-10">Die Geschichte hinter Nyx Media</h2>
+
+    <div class="bg-nyxsurface border border-nyxborder rounded-2xl p-8 md:p-10 relative">
+      <span class="absolute -top-5 left-8 font-serif text-6xl text-gold/30 select-none">"</span>
+      <p class="text-gray-300 leading-relaxed mb-4">
+        Bevor es Nyx Media gab, habe ich selbst als Chat-Moderator für eine große Agentur gearbeitet.
+        Ich habe aus erster Hand gesehen, wie ein großer Teil dieser Branche tatsächlich funktioniert:
+        Volumen vor Qualität.
+      </p>
+      <p class="text-gray-300 leading-relaxed mb-4">
+        Chatter wurden dort weltweit eingesetzt, oft zu extrem geringen Margen — mit entsprechend
+        dünner Schulung und wenig Bindung an die Marke des jeweiligen Creators. Die Rechnung dafür
+        zahlten am Ende die Creator selbst: durch mittelmäßige Gesprächsführung, liegen gelassenen
+        Umsatz und Provisionsmodelle, bei denen ihnen oft deutlich weniger vom eigenen Erfolg blieb,
+        als ihre Arbeit eigentlich wert war.
+      </p>
+      <p class="text-gray-300 leading-relaxed">
+        Genau aus dieser Erfahrung heraus habe ich Nyx Media gegründet — als bewusstes Gegenmodell
+        zur Masse.
+      </p>
+      <p class="text-right text-sm text-gold mt-6 font-serif tracking-wide">— Felix Koglin, Gründer von Nyx Media</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAS PROBLEM ============ -->
+<section class="py-20 px-6 lg:px-10 bg-nyxsurface/40 border-y border-nyxborder/60">
+  <div class="max-w-4xl mx-auto">
+    <p class="uppercase tracking-[0.3em] text-xs text-gold/90 mb-4 text-center">Das Problem</p>
+    <h2 class="font-serif text-2xl md:text-3xl text-white text-center mb-12">Warum viele Creator am Ende zu kurz kommen</h2>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="bg-nyxcard border border-nyxborder rounded-2xl p-7">
+        <h3 class="text-white font-medium mb-2">Volumen statt Qualität</h3>
+        <p class="text-sm text-gray-400 leading-relaxed">Viele Anbieter setzen auf möglichst viele Accounts gleichzeitig — mit Chattern, die kaum geschult und entsprechend schlecht bezahlt sind.</p>
+      </div>
+      <div class="bg-nyxcard border border-nyxborder rounded-2xl p-7">
+        <h3 class="text-white font-medium mb-2">Sprachliche Distanz</h3>
+        <p class="text-sm text-gray-400 leading-relaxed">Internationale Teams ohne Sprachgefühl für den deutschsprachigen Markt führen oft zu generischen, wenig überzeugenden Chats.</p>
+      </div>
+      <div class="bg-nyxcard border border-nyxborder rounded-2xl p-7">
+        <h3 class="text-white font-medium mb-2">Unfaire Beteiligung</h3>
+        <p class="text-sm text-gray-400 leading-relaxed">Creator behalten am Ende häufig weniger vom eigenen Erfolg, als ihre Arbeit und ihre Marke eigentlich wert sind.</p>
+      </div>
+      <div class="bg-nyxcard border border-nyxborder rounded-2xl p-7">
+        <h3 class="text-white font-medium mb-2">Hohe Fluktuation</h3>
+        <p class="text-sm text-gray-400 leading-relaxed">Ständig wechselnde Chatter kosten Zeit und Konsistenz — und damit letztlich auch Umsatz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UNSER ANSATZ ============ -->
+<section class="py-20 px-6 lg:px-10">
+  <div class="max-w-4xl mx-auto">
+    <p class="uppercase tracking-[0.3em] text-xs text-violet-light mb-4 text-center">Unser Ansatz</p>
+    <h2 class="font-serif text-2xl md:text-3xl text-white text-center mb-12">Boutique statt Massenware</h2>
+
+    <div class="space-y-5">
+      <div class="flex gap-4 bg-nyxsurface border border-nyxborder rounded-xl p-6">
+        <span class="text-gold text-xl">◆</span>
+        <div>
+          <h3 class="text-white font-medium mb-1">Sorgfältige Auswahl</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Wir stellen bewusst nur wenige, aber exzellente Chatter ein — statt auf Massenrecruiting zu setzen.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 bg-nyxsurface border border-nyxborder rounded-xl p-6">
+        <span class="text-gold text-xl">◆</span>
+        <div>
+          <h3 class="text-white font-medium mb-1">Interne Schulung</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Jeder Chatter wird intensiv auf Tonalität, Psychologie und Verkaufstechnik geschult, bevor er für Sie arbeitet.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 bg-nyxsurface border border-nyxborder rounded-xl p-6">
+        <span class="text-gold text-xl">◆</span>
+        <div>
+          <h3 class="text-white font-medium mb-1">Ausschließlich DACH-Raum</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Unsere Chatter kommen ausschließlich aus dem deutschsprachigen Raum und sind Muttersprachler — für echtes Sprachgefühl statt generischer Textbausteine.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 bg-nyxsurface border border-nyxborder rounded-xl p-6">
+        <span class="text-gold text-xl">◆</span>
+        <div>
+          <h3 class="text-white font-medium mb-1">Langfristige Zusammenarbeit</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Wir setzen auf feste Teams statt ständig wechselnder Gesichter, damit Ihre Persona konsistent bleibt.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 bg-gradient-to-b from-nyxcard to-nyxsurface border border-gold/30 rounded-xl p-6 shadow-gold">
+        <span class="text-gold text-xl">◆</span>
+        <div>
+          <h3 class="text-gold font-medium mb-1">Faire Beteiligung</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">Weil wir schlank und fokussiert arbeiten statt auf Masse zu setzen, bleibt für Sie als Creator ein fairer Anteil an jedem Euro, den wir gemeinsam erwirtschaften.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="py-20 px-6 lg:px-10 bg-radial-glow border-t border-nyxborder/60 text-center">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="font-serif text-2xl md:text-3xl text-white mb-6">Lernen Sie uns persönlich kennen</h2>
+    <p class="text-gray-400 mb-8 leading-relaxed">
+      Im Kennenlern-Call sprechen wir direkt mit Ihnen — kein anonymes Callcenter, sondern das Team,
+      das später wirklich für Sie arbeitet.
+    </p>
+    <a href="index.html#booking" class="inline-flex items-center gap-3 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-nyxbg font-medium px-9 py-4 rounded-full shadow-gold hover:brightness-110 transition-all duration-300">
+      Kostenloses Strategiegespräch buchen
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-nyxborder/60 bg-nyxsurface/60 px-6 lg:px-10 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2 mb-4">
+        <svg viewBox="0 0 40 40" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldGradFooterAbout" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#e8cf85"/>
+              <stop offset="50%" stop-color="#c9a24c"/>
+              <stop offset="100%" stop-color="#8f7431"/>
+            </linearGradient>
+          </defs>
+          <circle cx="20" cy="20" r="18.5" fill="none" stroke="url(#goldGradFooterAbout)" stroke-width="1"/>
+          <path d="M25 9.5 A11.5 11.5 0 1 0 25 30.5 A8.7 8.7 0 1 1 25 9.5 Z" fill="url(#goldGradFooterAbout)"/>
+          <circle cx="27.5" cy="12.5" r="1.4" fill="url(#goldGradFooterAbout)"/>
+        </svg>
+        <span class="font-serif text-lg tracking-[0.25em] text-white">NYX</span>
+      </div>
+      <p class="text-sm text-gray-500 max-w-sm leading-relaxed">
+        Nyx Media ist eine Boutique-Agentur für Content-Creator-Management. Wir übernehmen das
+        Chat- und Fan-Management für etablierte Creator — wir erstellen keine eigenen Inhalte.
+      </p>
+    </div>
+
+    <div>
+      <h5 class="text-white text-sm font-medium mb-4 tracking-wide">Navigation</h5>
+      <ul class="space-y-2 text-sm text-gray-500">
+        <li><a href="index.html#leistungen" class="hover:text-gold transition-colors">Leistungen</a></li>
+        <li><a href="index.html#ablauf" class="hover:text-gold transition-colors">Ablauf</a></li>
+        <li><a href="index.html#faq" class="hover:text-gold transition-colors">FAQ</a></li>
+        <li><a href="ueber-uns.html" class="hover:text-gold transition-colors">Über uns</a></li>
+        <li><a href="index.html#booking" class="hover:text-gold transition-colors">Call buchen</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5 class="text-white text-sm font-medium mb-4 tracking-wide">Rechtliches</h5>
+      <ul class="space-y-2 text-sm text-gray-500">
+        <li><a href="impressum.html" class="hover:text-gold transition-colors">Impressum</a></li>
+        <li><a href="datenschutz.html" class="hover:text-gold transition-colors">Datenschutz</a></li>
+        <li><a href="mailto:hello@nyx-media.de" class="hover:text-gold transition-colors">hello@nyx-media.de</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto border-t border-nyxborder/60 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
+    <p>© 2026 Nyx Media. Alle Rechte vorbehalten.</p>
+    <p>nyx-media.de</p>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+  });
+</script>
+
+</body>
+</html>
