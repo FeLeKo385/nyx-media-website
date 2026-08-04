@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nyx Media — 24/7 Chat-Management für Content Creator</title>
-<meta name="description" content="Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator. 100% erfolgsbasiert, keine Fixkosten, risikofreie 7-Tage-Testphase.">
-
-<!-- Tailwind CDN -->
+<meta name="description" content="Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator auf allen gängigen Creator-Plattformen. 100% erfolgsbasiert, keine Fixkosten, risikofreie 7-Tage-Testphase.">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -40,18 +38,19 @@
     },
   };
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
-
 <style>
   html { scroll-behavior: smooth; }
   body { background-color: #08080c; }
   .bg-radial-glow {
-    background: radial-gradient(circle at 50% 0%, rgba(108,99,255,0.16), transparent 60%),
-                radial-gradient(circle at 85% 20%, rgba(201,162,76,0.10), transparent 55%);
+    background: radial-gradient(circle at 50% 0%, rgba(108,99,255,0.13), transparent 60%),
+                radial-gradient(circle at 85% 20%, rgba(201,162,76,0.03), transparent 55%);
+  }
+  .section-fade {
+    background: linear-gradient(to bottom, transparent 0%, rgba(15,15,22,0.55) 12%, rgba(15,15,22,0.55) 88%, transparent 100%);
   }
   .gold-gradient-text {
     background: linear-gradient(120deg, #e8cf85 0%, #c9a24c 45%, #8f7431 100%);
@@ -102,14 +101,11 @@
     z-index: 0;
   }
   .section-tint.in-view { opacity: 1; }
-  .tint-violet { background: radial-gradient(circle at 50% 20%, rgba(108,99,255,0.16), transparent 65%); }
-  .tint-gold { background: radial-gradient(circle at 50% 20%, rgba(201,162,76,0.12), transparent 65%); }
+  .tint-violet { background: radial-gradient(circle at 50% 20%, rgba(108,99,255,0.12), transparent 65%); }
+  .tint-gold { background: radial-gradient(circle at 50% 20%, rgba(201,162,76,0.03), transparent 65%); }
 </style>
 </head>
-
 <body class="bg-nyxbg text-gray-200 font-sans antialiased">
-
-<!-- Feine Grain-Textur über der gesamten Seite, rein dekorativ -->
 <div class="pointer-events-none fixed inset-0 z-0 opacity-[0.035]" aria-hidden="true">
   <svg width="100%" height="100%">
     <filter id="grainFilter">
@@ -118,8 +114,6 @@
     <rect width="100%" height="100%" filter="url(#grainFilter)"/>
   </svg>
 </div>
-
-<!-- ============ HEADER / NAV ============ -->
 <header class="fixed top-0 inset-x-0 z-50 nav-blur bg-nyxbg/70 border-b border-nyxborder/60">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="flex items-center justify-between h-20">
@@ -138,7 +132,6 @@
         </svg>
         <span class="font-serif text-xl md:text-2xl tracking-[0.25em] text-white">NYX</span>
       </a>
-
       <nav class="hidden lg:flex items-center gap-10 text-sm tracking-wide text-gray-300">
         <a href="#leistungen" class="hover:text-gold transition-colors">Leistungen</a>
         <a href="#ablauf" class="hover:text-gold transition-colors">Ablauf</a>
@@ -146,18 +139,14 @@
         <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
         <a href="ueber-uns.html" class="hover:text-gold transition-colors">Über uns</a>
       </nav>
-
       <a href="#booking" class="hidden lg:inline-flex items-center gap-2 border border-gold/70 text-gold px-6 py-2.5 rounded-full text-sm tracking-wide hover:bg-gold hover:text-nyxbg transition-all duration-300">
         Call buchen
       </a>
-
       <button id="menuBtn" class="lg:hidden text-gray-200" aria-label="Menü öffnen">
         <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </button>
     </div>
   </div>
-
-  <!-- Mobile Menu -->
   <div id="mobileMenu" class="hidden lg:hidden border-t border-nyxborder/60 bg-nyxbg/95 px-6 py-6 space-y-5 text-gray-300">
     <a href="#leistungen" class="block hover:text-gold">Leistungen</a>
     <a href="#ablauf" class="block hover:text-gold">Ablauf</a>
@@ -167,15 +156,9 @@
     <a href="#booking" class="block text-center border border-gold text-gold px-6 py-2.5 rounded-full">Call buchen</a>
   </div>
 </header>
-
 <main id="top">
-
-<!-- ============ HERO ============ -->
 <section class="relative bg-radial-glow pt-40 pb-28 px-6 lg:px-10 overflow-hidden">
-
-  <!-- Dezenter Mond im Hintergrund, rein dekorativ -->
-  <svg viewBox="0 0 400 400" aria-hidden="true"
-       class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] md:w-[560px] md:h-[560px] opacity-[0.07] z-0">
+  <svg viewBox="0 0 400 400" aria-hidden="true" class="pointer-events-none absolute -top-24 -right-24 w-[420px] h-[420px] md:w-[560px] md:h-[560px] opacity-[0.07] z-0">
     <defs>
       <linearGradient id="heroMoonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#e8cf85"/>
@@ -184,7 +167,6 @@
     </defs>
     <path d="M250 60 A150 150 0 1 0 250 340 A115 115 0 1 1 250 60 Z" fill="url(#heroMoonGrad)"/>
   </svg>
-
   <div class="max-w-5xl mx-auto text-center relative z-10">
     <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-gold/90 mb-6">Premium Creator Management</p>
     <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-8">
@@ -192,21 +174,19 @@
       <span class="gold-gradient-text">Ihr Umsatz auch nicht.</span>
     </h1>
     <p class="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-      Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator —
-      diskret, markenkonform und zu 100&nbsp;% erfolgsbasiert. Keine Fixkosten. Keine Vertragsbindung.
-      Nur messbare Ergebnisse.
+      Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator
+      auf allen gängigen Creator-Plattformen — diskret, markenkonform und zu 100&nbsp;% erfolgsbasiert.
+      Keine Fixkosten. Keine Vertragsbindung. Nur messbare Ergebnisse.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="#booking" class="w-full sm:w-auto bg-gradient-to-r from-gold-light via-gold to-gold-dark text-nyxbg font-medium px-8 py-4 rounded-full shadow-gold hover:brightness-110 transition-all duration-300 text-center">
-        Kostenloses Strategiegespräch sichern
+        Kostenloses Kennenlerngespräch sichern
       </a>
       <a href="#leistungen" class="w-full sm:w-auto border border-nyxborder text-gray-200 px-8 py-4 rounded-full hover:border-gold hover:text-gold transition-all duration-300 text-center">
         Unsere Leistungen
       </a>
     </div>
   </div>
-
-  <!-- Trust bar -->
   <div class="max-w-5xl mx-auto mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
     <div class="text-center border-t border-nyxborder pt-5">
       <p class="font-serif text-2xl text-gold mb-1">100%</p>
@@ -226,8 +206,6 @@
     </div>
   </div>
 </section>
-
-<!-- Mondphasen-Motiv als Sektionstrenner, rein dekorativ -->
 <div class="flex items-center justify-center gap-4 md:gap-6 py-10 opacity-60" aria-hidden="true">
   <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#c9a24c"/><circle cx="12" cy="12" r="10" fill="#08080c"/></svg>
   <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#c9a24c"/><circle cx="8" cy="12" r="10" fill="#08080c"/></svg>
@@ -237,8 +215,6 @@
   <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#c9a24c"/><circle cx="-7" cy="12" r="10" fill="#08080c"/></svg>
   <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#c9a24c"/></svg>
 </div>
-
-<!-- ============ PAIN POINTS & SOLUTION ============ -->
 <section class="relative overflow-hidden py-24 px-6 lg:px-10">
   <div class="section-tint tint-violet" aria-hidden="true"></div>
   <div class="relative z-10 max-w-6xl mx-auto">
@@ -252,9 +228,7 @@
         wenn niemand rund um die Uhr antwortet. Genau hier setzen wir an.
       </p>
     </div>
-
     <div class="grid md:grid-cols-2 gap-6">
-      <!-- Problem -->
       <div class="reveal reveal-left bg-nyxsurface border border-nyxborder rounded-2xl p-8">
         <h3 class="font-serif text-xl text-gray-100 mb-6">Der Alltag ohne System</h3>
         <ul class="space-y-4 text-gray-400 text-sm leading-relaxed">
@@ -265,8 +239,6 @@
           <li class="flex gap-3"><span class="text-gray-600">—</span> Time-Waster kosten wertvolle Zeit, die zahlenden Fans fehlt.</li>
         </ul>
       </div>
-
-      <!-- Solution -->
       <div class="reveal reveal-right bg-gradient-to-b from-nyxcard to-nyxsurface border border-gold/30 rounded-2xl p-8 shadow-gold" style="transition-delay:0.15s">
         <h3 class="font-serif text-xl text-gold mb-6">Die Nyx-Lösung</h3>
         <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
@@ -280,18 +252,14 @@
     </div>
   </div>
 </section>
-
-<!-- ============ LEISTUNGEN ============ -->
-<section id="leistungen" class="relative overflow-hidden py-24 px-6 lg:px-10 bg-nyxsurface/40 border-y border-nyxborder/60">
+<section id="leistungen" class="relative overflow-hidden py-24 px-6 lg:px-10 section-fade">
   <div class="section-tint tint-gold" aria-hidden="true"></div>
   <div class="relative z-10 max-w-6xl mx-auto">
     <div class="reveal reveal-up text-center max-w-2xl mx-auto mb-16">
       <p class="uppercase tracking-[0.3em] text-xs text-gold/90 mb-4">Leistungen</p>
       <h2 class="font-serif text-3xl md:text-4xl text-white">Alles, was Ihr Postfach in Umsatz verwandelt</h2>
     </div>
-
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
       <div class="reveal reveal-up">
         <div class="card-hover bg-nyxcard border border-nyxborder rounded-2xl p-8">
           <div class="w-11 h-11 rounded-full border border-gold/50 flex items-center justify-center mb-5 text-gold">🌙</div>
@@ -299,7 +267,6 @@
           <p class="text-sm text-gray-400 leading-relaxed">Rund um die Uhr geschulte, markenkonforme Betreuung Ihres Posteingangs — in Ihrem Ton, Ihrer Persona.</p>
         </div>
       </div>
-
       <div class="reveal reveal-up" style="transition-delay:0.08s">
         <div class="card-hover bg-nyxcard border border-nyxborder rounded-2xl p-8">
           <div class="w-11 h-11 rounded-full border border-gold/50 flex items-center justify-center mb-5 text-gold">💎</div>
@@ -307,7 +274,6 @@
           <p class="text-sm text-gray-400 leading-relaxed">Strategischer Verkauf von Pay-per-View-Content zum optimalen Zeitpunkt — für maximalen Umsatz pro Fan.</p>
         </div>
       </div>
-
       <div class="reveal reveal-up" style="transition-delay:0.16s">
         <div class="card-hover bg-nyxcard border border-nyxborder rounded-2xl p-8">
           <div class="w-11 h-11 rounded-full border border-gold/50 flex items-center justify-center mb-5 text-gold">🎯</div>
@@ -315,7 +281,6 @@
           <p class="text-sm text-gray-400 leading-relaxed">Wir identifizieren zahlungsbereite Fans zuverlässig und filtern Time-Waster konsequent heraus.</p>
         </div>
       </div>
-
       <div class="reveal reveal-up" style="transition-delay:0.24s">
         <div class="card-hover bg-nyxcard border border-nyxborder rounded-2xl p-8">
           <div class="w-11 h-11 rounded-full border border-gold/50 flex items-center justify-center mb-5 text-gold">👑</div>
@@ -323,7 +288,6 @@
           <p class="text-sm text-gray-400 leading-relaxed">Ihre umsatzstärksten Fans erhalten eine individuelle, persönliche Betreuung auf höchstem Niveau.</p>
         </div>
       </div>
-
       <div class="reveal reveal-up" style="transition-delay:0.32s">
         <div class="card-hover bg-nyxcard border border-nyxborder rounded-2xl p-8">
           <div class="w-11 h-11 rounded-full border border-gold/50 flex items-center justify-center mb-5 text-gold">✦</div>
@@ -331,7 +295,6 @@
           <p class="text-sm text-gray-400 leading-relaxed">Wir erkennen individuelle Nachfrage und verkaufen Custom Content zum richtigen Preis, im richtigen Moment.</p>
         </div>
       </div>
-
       <div class="reveal reveal-up" style="transition-delay:0.4s">
         <div class="card-hover bg-nyxcard border border-nyxborder rounded-2xl p-8">
           <div class="w-11 h-11 rounded-full border border-gold/50 flex items-center justify-center mb-5 text-gold">📊</div>
@@ -339,25 +302,17 @@
           <p class="text-sm text-gray-400 leading-relaxed">Regelmäßige, transparente Umsatz- und Performance-Reports — Sie behalten jederzeit die volle Kontrolle.</p>
         </div>
       </div>
-
     </div>
-
-    <!-- Risk-free banner -->
     <div class="reveal reveal-scale relative overflow-hidden mt-10 rounded-2xl border border-violet/40 bg-gradient-to-r from-violet/10 via-nyxcard to-nyxcard p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-
-      <!-- Abstrakter Wachstums-Chart, rein dekorativ -->
-      <svg viewBox="0 0 220 120" aria-hidden="true"
-           class="pointer-events-none absolute right-0 bottom-0 w-48 md:w-64 h-auto opacity-20">
+      <svg viewBox="0 0 220 120" aria-hidden="true" class="pointer-events-none absolute right-0 bottom-0 w-48 md:w-64 h-auto opacity-20">
         <defs>
           <linearGradient id="chartGrad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="#948dff"/>
             <stop offset="100%" stop-color="#e8cf85"/>
           </linearGradient>
         </defs>
-        <polyline points="0,100 30,90 60,95 90,70 120,75 150,40 180,45 220,10"
-                  fill="none" stroke="url(#chartGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="0,100 30,90 60,95 90,70 120,75 150,40 180,45 220,10" fill="none" stroke="url(#chartGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-
       <div class="relative z-10">
         <h3 class="font-serif text-xl md:text-2xl text-white mb-2">7 Tage. Ohne Risiko. Ohne Vertragsbindung.</h3>
         <p class="text-gray-400 text-sm md:text-base max-w-xl">Wir arbeiten ausschließlich auf Provisionsbasis. Sie zahlen nie im Voraus — wir verdienen erst, wenn Sie mehr verdienen.</p>
@@ -368,8 +323,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ ABLAUF ============ -->
 <section id="ablauf" class="relative overflow-hidden py-24 px-6 lg:px-10">
   <div class="section-tint tint-gold" aria-hidden="true"></div>
   <div class="relative z-10 max-w-6xl mx-auto">
@@ -377,7 +330,6 @@
       <p class="uppercase tracking-[0.3em] text-xs text-gold/90 mb-4">Der Ablauf</p>
       <h2 class="font-serif text-3xl md:text-4xl text-white">In drei Schritten zur Partnerschaft</h2>
     </div>
-
     <div class="grid md:grid-cols-3 gap-8">
       <div class="reveal reveal-left relative bg-nyxsurface border border-nyxborder rounded-2xl p-8">
         <span class="font-serif text-5xl gold-gradient-text">01</span>
@@ -397,16 +349,13 @@
     </div>
   </div>
 </section>
-
-<!-- ============ WARUM NYX / TRUST SIGNALS ============ -->
-<section id="warum-wir" class="relative overflow-hidden py-24 px-6 lg:px-10 bg-nyxsurface/40 border-y border-nyxborder/60">
+<section id="warum-wir" class="relative overflow-hidden py-24 px-6 lg:px-10 section-fade">
   <div class="section-tint tint-violet" aria-hidden="true"></div>
   <div class="relative z-10 max-w-6xl mx-auto">
     <div class="reveal reveal-up text-center max-w-2xl mx-auto mb-16">
       <p class="uppercase tracking-[0.3em] text-xs text-violet-light mb-4">Warum Nyx Media</p>
       <h2 class="font-serif text-3xl md:text-4xl text-white">Diskretion und Professionalität als Standard</h2>
     </div>
-
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
       <div class="reveal reveal-blur flex gap-4">
         <span class="text-gold text-xl">◆</span>
@@ -453,8 +402,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ FAQ ============ -->
 <section id="faq" class="relative overflow-hidden py-24 px-6 lg:px-10">
   <div class="section-tint tint-gold" aria-hidden="true"></div>
   <div class="relative z-10 max-w-3xl mx-auto">
@@ -462,9 +409,7 @@
       <p class="uppercase tracking-[0.3em] text-xs text-gold/90 mb-4">FAQ</p>
       <h2 class="font-serif text-3xl md:text-4xl text-white">Häufige Fragen von Creatorn</h2>
     </div>
-
     <div class="space-y-4">
-
       <details class="reveal reveal-up group bg-nyxsurface border border-nyxborder rounded-xl p-6 open:border-gold/40">
         <summary class="flex items-center justify-between cursor-pointer">
           <span class="text-white font-medium pr-4">Bleiben mein Account und meine Inhalte sicher?</span>
@@ -472,7 +417,6 @@
         </summary>
         <p class="text-sm text-gray-400 mt-4 leading-relaxed">Ja. Wir arbeiten mit klar definierten Zugriffsrechten, strikter Vertraulichkeit und auf Wunsch einer gesonderten NDA. Ihre Inhalte und Ihr Account bleiben jederzeit ausschließlich Ihr Eigentum.</p>
       </details>
-
       <details class="reveal reveal-up group bg-nyxsurface border border-nyxborder rounded-xl p-6 open:border-gold/40" style="transition-delay:0.06s">
         <summary class="flex items-center justify-between cursor-pointer">
           <span class="text-white font-medium pr-4">Wie funktioniert die Provisionsabrechnung genau?</span>
@@ -480,7 +424,6 @@
         </summary>
         <p class="text-sm text-gray-400 mt-4 leading-relaxed">Sie zahlen ausschließlich einen prozentualen Anteil am durch uns generierten Mehrumsatz. Alles ist im transparenten Reporting nachvollziehbar — keine Fixkosten, keine versteckten Gebühren.</p>
       </details>
-
       <details class="reveal reveal-up group bg-nyxsurface border border-nyxborder rounded-xl p-6 open:border-gold/40" style="transition-delay:0.12s">
         <summary class="flex items-center justify-between cursor-pointer">
           <span class="text-white font-medium pr-4">Verliere ich die Kontrolle über meine Persona?</span>
@@ -488,7 +431,6 @@
         </summary>
         <p class="text-sm text-gray-400 mt-4 leading-relaxed">Nein. Zu Beginn erarbeiten wir gemeinsam klare Tonalitäts-Guidelines. Sie geben jederzeit Feedback, und wir stimmen uns laufend mit Ihnen ab.</p>
       </details>
-
       <details class="reveal reveal-up group bg-nyxsurface border border-nyxborder rounded-xl p-6 open:border-gold/40" style="transition-delay:0.18s">
         <summary class="flex items-center justify-between cursor-pointer">
           <span class="text-white font-medium pr-4">Was passiert nach der 7-tägigen Testphase?</span>
@@ -496,7 +438,6 @@
         </summary>
         <p class="text-sm text-gray-400 mt-4 leading-relaxed">Wir werten die Ergebnisse gemeinsam aus und entscheiden, ob wir die Zusammenarbeit fortsetzen. Es besteht keinerlei Verpflichtung — Sie entscheiden.</p>
       </details>
-
       <details class="reveal reveal-up group bg-nyxsurface border border-nyxborder rounded-xl p-6 open:border-gold/40" style="transition-delay:0.24s">
         <summary class="flex items-center justify-between cursor-pointer">
           <span class="text-white font-medium pr-4">Wie schnell kann es losgehen?</span>
@@ -504,7 +445,6 @@
         </summary>
         <p class="text-sm text-gray-400 mt-4 leading-relaxed">Nach dem Kennenlern-Call und einem kurzen Onboarding kann Ihre risikofreie Testwoche in der Regel innerhalb weniger Tage starten.</p>
       </details>
-
       <details class="reveal reveal-up group bg-nyxsurface border border-nyxborder rounded-xl p-6 open:border-gold/40" style="transition-delay:0.3s">
         <summary class="flex items-center justify-between cursor-pointer">
           <span class="text-white font-medium pr-4">Ab welcher Followerzahl lohnt sich eine Zusammenarbeit?</span>
@@ -512,42 +452,25 @@
         </summary>
         <p class="text-sm text-gray-400 mt-4 leading-relaxed">Unsere Betreuung ist auf etablierte Creator ab ca. 20.000–50.000+ Followern ausgelegt, deren Postfach bereits an seine Kapazitätsgrenzen stößt.</p>
       </details>
-
     </div>
   </div>
 </section>
-
-<!-- ============ BOOKING / KALENDER ============ -->
-<section id="booking" class="py-24 px-6 lg:px-10 bg-radial-glow border-t border-nyxborder/60">
+<section id="booking" class="py-24 px-6 lg:px-10 bg-radial-glow">
   <div class="reveal reveal-scale max-w-4xl mx-auto text-center">
     <p class="uppercase tracking-[0.3em] text-xs text-gold/90 mb-4">Nächster Schritt</p>
     <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Bereit, Ihren Umsatz zu skalieren?</h2>
     <p class="text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
-      Sichern Sie sich ein unverbindliches Strategiegespräch. Wir sprechen über Ihre aktuelle Situation
+      Sichern Sie sich ein unverbindliches Kennenlerngespräch. Wir sprechen über Ihre aktuelle Situation
       und zeigen Ihnen, wie eine risikofreie Testwoche mit Nyx Media aussehen könnte.
     </p>
-
-    <!--
-      CALENDLY-INTEGRATION:
-      Ersetzen Sie den folgenden Button-Link durch Ihren echten Calendly-Link,
-      z. B. https://calendly.com/ihr-nyx-media-account/strategiegespraech
-
-      Für ein eingebettetes Kalender-Widget kann stattdessen das Calendly-Inline-Skript verwendet werden:
-      <div class="calendly-inline-widget" data-url="https://calendly.com/IHR-LINK" style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    -->
-    <a href="https://calendly.com/nyx-media-group/strategiegespraech" target="_blank" rel="noopener"
+    <a href="https://calendly.com/koglin-nyx-media/kennenlernen" target="_blank" rel="noopener"
        class="inline-flex items-center gap-3 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-nyxbg font-medium px-10 py-4 rounded-full shadow-gold hover:brightness-110 transition-all duration-300">
-      Kostenloses Strategiegespräch buchen
+      Kostenloses Kennenlerngespräch buchen
     </a>
-
-    <p class="text-xs text-gray-500 mt-6">Unverbindlich · 20 Minuten · Absolut diskret</p>
+    <p class="text-xs text-gray-500 mt-6">Unverbindlich · 30 Minuten · Absolut diskret</p>
   </div>
 </section>
-
 </main>
-
-<!-- ============ FOOTER ============ -->
 <footer class="border-t border-nyxborder/60 bg-nyxsurface/60 px-6 lg:px-10 pt-16 pb-8">
   <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
     <div class="md:col-span-2">
@@ -571,7 +494,6 @@
         Wir übernehmen das Chat- und Fan-Management für etablierte Creator — wir erstellen keine eigenen Inhalte.
       </p>
     </div>
-
     <div>
       <h5 class="text-white text-sm font-medium mb-4 tracking-wide">Navigation</h5>
       <ul class="space-y-2 text-sm text-gray-500">
@@ -583,7 +505,6 @@
         <li><a href="#booking" class="hover:text-gold transition-colors">Call buchen</a></li>
       </ul>
     </div>
-
     <div>
       <h5 class="text-white text-sm font-medium mb-4 tracking-wide">Rechtliches</h5>
       <ul class="space-y-2 text-sm text-gray-500">
@@ -593,13 +514,11 @@
       </ul>
     </div>
   </div>
-
   <div class="max-w-7xl mx-auto border-t border-nyxborder/60 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
     <p>© 2026 Nyx Media. Alle Rechte vorbehalten.</p>
     <p>nyx-media.de</p>
   </div>
 </footer>
-
 <script>
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -609,7 +528,6 @@
   document.querySelectorAll('#mobileMenu a').forEach(link => {
     link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
   });
-
   const revealEls = document.querySelectorAll('.reveal, .section-tint');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -625,6 +543,5 @@
     revealEls.forEach((el) => el.classList.add('in-view'));
   }
 </script>
-
 </body>
 </html>
