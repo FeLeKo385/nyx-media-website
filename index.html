@@ -116,12 +116,31 @@
   @media (prefers-reduced-motion: reduce) {
     .bg-blob { animation: none; }
   }
-  .blob-1 { top: -60px;   left: -110px;  width: 520px; height: 520px; background: radial-gradient(circle, rgba(0,174,239,0.35), transparent 70%); animation-duration: 24s; }
-  .blob-2 { top: 640px;   right: -140px; width: 620px; height: 620px; background: radial-gradient(circle, rgba(37,99,235,0.28), transparent 70%); animation-duration: 30s; animation-delay: -6s; }
-  .blob-3 { top: 1520px;  left: -100px;  width: 480px; height: 480px; background: radial-gradient(circle, rgba(79,195,247,0.32), transparent 70%); animation-duration: 26s; animation-delay: -10s; }
-  .blob-4 { top: 2350px;  right: -120px; width: 560px; height: 560px; background: radial-gradient(circle, rgba(0,174,239,0.26), transparent 70%); animation-duration: 28s; animation-delay: -4s; }
-  .blob-5 { top: 3200px;  left: -90px;   width: 460px; height: 460px; background: radial-gradient(circle, rgba(37,99,235,0.24), transparent 70%); animation-duration: 32s; animation-delay: -14s; }
-  .blob-6 { top: 4050px;  right: -100px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(79,195,247,0.28), transparent 70%); animation-duration: 25s; animation-delay: -8s; }
+  .blob-1 { top: -80px;   left: -120px;  width: 560px; height: 560px; background: radial-gradient(circle, rgba(0,174,239,0.45), transparent 70%); animation-duration: 24s; }
+  .blob-2 { top: 600px;   right: -150px; width: 660px; height: 660px; background: radial-gradient(circle, rgba(30,58,138,0.38), transparent 70%); animation-duration: 30s; animation-delay: -6s; }
+  .blob-3 { top: 1480px;  left: -110px;  width: 520px; height: 520px; background: radial-gradient(circle, rgba(125,211,252,0.5), transparent 70%); animation-duration: 26s; animation-delay: -10s; }
+  .blob-4 { top: 2300px;  right: -130px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,174,239,0.36), transparent 70%); animation-duration: 28s; animation-delay: -4s; }
+  .blob-5 { top: 3100px;  left: -100px;  width: 500px; height: 500px; background: radial-gradient(circle, rgba(30,58,138,0.34), transparent 70%); animation-duration: 32s; animation-delay: -14s; }
+  .blob-6 { top: 3950px;  right: -110px; width: 560px; height: 560px; background: radial-gradient(circle, rgba(79,195,247,0.4), transparent 70%); animation-duration: 25s; animation-delay: -8s; }
+  .blob-7 { top: 1050px;  left: 45%;     width: 420px; height: 420px; background: radial-gradient(circle, rgba(37,99,235,0.3), transparent 70%); animation-duration: 34s; animation-delay: -18s; }
+  .blob-8 { top: 2850px;  left: 40%;     width: 440px; height: 440px; background: radial-gradient(circle, rgba(0,174,239,0.3), transparent 70%); animation-duration: 29s; animation-delay: -2s; }
+  .marquee-wrap {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marqueeScroll 34s linear infinite;
+  }
+  @keyframes marqueeScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+  }
 </style>
 </head>
 <body class="bg-nyxbg text-gray-700 font-sans antialiased" style="overflow-x:hidden;">
@@ -131,6 +150,8 @@
 <div class="bg-blob blob-4" aria-hidden="true"></div>
 <div class="bg-blob blob-5" aria-hidden="true"></div>
 <div class="bg-blob blob-6" aria-hidden="true"></div>
+<div class="bg-blob blob-7" aria-hidden="true"></div>
+<div class="bg-blob blob-8" aria-hidden="true"></div>
 <div class="pointer-events-none fixed inset-0 z-0 opacity-[0.02]" aria-hidden="true">
   <svg width="100%" height="100%">
     <filter id="grainFilter">
@@ -202,6 +223,11 @@
       Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator —
       diskret, markenkonform und zu 100&nbsp;% erfolgsbasiert. Keine Fixkosten. Keine Vertragsbindung.
     </p>
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-9 text-sm text-gray-600">
+      <span class="inline-flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>100% erfolgsbasiert</span>
+      <span class="inline-flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Keine Vertragsbindung</span>
+      <span class="inline-flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Nur muttersprachliches Team</span>
+    </div>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="#booking" class="w-full sm:w-auto bg-gradient-to-r from-gold-light via-gold to-gold-dark text-white font-medium px-8 py-4 rounded-full shadow-gold hover:brightness-110 transition-all duration-300 text-center">
         Kostenloses Kennenlerngespräch sichern
@@ -230,6 +256,25 @@
     </div>
   </div>
 </section>
+<div class="relative z-10 py-10 border-y border-nyxborder/70 bg-nyxsurface/60">
+  <p class="text-center text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Wir betreuen Creator auf den führenden Plattformen</p>
+  <div class="marquee-wrap max-w-5xl mx-auto">
+    <div class="marquee-track gap-16 items-center pr-16">
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap">OnlyFans</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap">Fansly</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap">Fanvue</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap">LoyalFans</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap">FanCentro</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap">ManyVids</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap" aria-hidden="true">OnlyFans</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap" aria-hidden="true">Fansly</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap" aria-hidden="true">Fanvue</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap" aria-hidden="true">LoyalFans</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap" aria-hidden="true">FanCentro</span>
+      <span class="font-serif text-2xl text-gray-400 whitespace-nowrap" aria-hidden="true">ManyVids</span>
+    </div>
+  </div>
+</div>
 <div class="flex items-center justify-center gap-4 md:gap-6 py-10 opacity-70" aria-hidden="true">
   <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#00AEEF"/><circle cx="12" cy="12" r="10" fill="#ffffff"/></svg>
   <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#00AEEF"/><circle cx="8" cy="12" r="10" fill="#ffffff"/></svg>
