@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nyx Media — 24/7 Chat-Management für Content Creator</title>
-<meta name="description" content="Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator. 100% erfolgsbasiert, keine Fixkosten, risikofreie 7-Tage-Testphase.">
-<!-- Tailwind CDN -->
+<meta name="description" content="Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator auf allen gängigen Creator-Plattformen. 100% erfolgsbasiert, keine Fixkosten, risikofreie 7-Tage-Testphase.">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -47,8 +46,11 @@
   html { scroll-behavior: smooth; }
   body { background-color: #08080c; }
   .bg-radial-glow {
-    background: radial-gradient(circle at 50% 0%, rgba(108,99,255,0.16), transparent 60%),
-                radial-gradient(circle at 85% 20%, rgba(201,162,76,0.10), transparent 55%);
+    background: radial-gradient(circle at 50% 0%, rgba(108,99,255,0.13), transparent 60%),
+                radial-gradient(circle at 85% 20%, rgba(201,162,76,0.03), transparent 55%);
+  }
+  .section-fade {
+    background: linear-gradient(to bottom, transparent 0%, rgba(15,15,22,0.55) 12%, rgba(15,15,22,0.55) 88%, transparent 100%);
   }
   .gold-gradient-text {
     background: linear-gradient(120deg, #e8cf85 0%, #c9a24c 45%, #8f7431 100%);
@@ -99,8 +101,8 @@
     z-index: 0;
   }
   .section-tint.in-view { opacity: 1; }
-  .tint-violet { background: radial-gradient(circle at 50% 20%, rgba(108,99,255,0.16), transparent 65%); }
-  .tint-gold { background: radial-gradient(circle at 50% 20%, rgba(201,162,76,0.12), transparent 65%); }
+  .tint-violet { background: radial-gradient(circle at 50% 20%, rgba(108,99,255,0.12), transparent 65%); }
+  .tint-gold { background: radial-gradient(circle at 50% 20%, rgba(201,162,76,0.03), transparent 65%); }
 </style>
 </head>
 <body class="bg-nyxbg text-gray-200 font-sans antialiased">
@@ -172,9 +174,9 @@
       <span class="gold-gradient-text">Ihr Umsatz auch nicht.</span>
     </h1>
     <p class="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-      Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator —
-      diskret, markenkonform und zu 100&nbsp;% erfolgsbasiert. Keine Fixkosten. Keine Vertragsbindung.
-      Nur messbare Ergebnisse.
+      Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator
+      auf allen gängigen Creator-Plattformen — diskret, markenkonform und zu 100&nbsp;% erfolgsbasiert.
+      Keine Fixkosten. Keine Vertragsbindung. Nur messbare Ergebnisse.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="#booking" class="w-full sm:w-auto bg-gradient-to-r from-gold-light via-gold to-gold-dark text-nyxbg font-medium px-8 py-4 rounded-full shadow-gold hover:brightness-110 transition-all duration-300 text-center">
@@ -250,7 +252,7 @@
     </div>
   </div>
 </section>
-<section id="leistungen" class="relative overflow-hidden py-24 px-6 lg:px-10 bg-nyxsurface/40 border-y border-nyxborder/60">
+<section id="leistungen" class="relative overflow-hidden py-24 px-6 lg:px-10 section-fade">
   <div class="section-tint tint-gold" aria-hidden="true"></div>
   <div class="relative z-10 max-w-6xl mx-auto">
     <div class="reveal reveal-up text-center max-w-2xl mx-auto mb-16">
@@ -347,7 +349,7 @@
     </div>
   </div>
 </section>
-<section id="warum-wir" class="relative overflow-hidden py-24 px-6 lg:px-10 bg-nyxsurface/40 border-y border-nyxborder/60">
+<section id="warum-wir" class="relative overflow-hidden py-24 px-6 lg:px-10 section-fade">
   <div class="section-tint tint-violet" aria-hidden="true"></div>
   <div class="relative z-10 max-w-6xl mx-auto">
     <div class="reveal reveal-up text-center max-w-2xl mx-auto mb-16">
@@ -453,7 +455,7 @@
     </div>
   </div>
 </section>
-<section id="booking" class="py-24 px-6 lg:px-10 bg-radial-glow border-t border-nyxborder/60">
+<section id="booking" class="py-24 px-6 lg:px-10 bg-radial-glow">
   <div class="reveal reveal-scale max-w-4xl mx-auto text-center">
     <p class="uppercase tracking-[0.3em] text-xs text-gold/90 mb-4">Nächster Schritt</p>
     <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Bereit, Ihren Umsatz zu skalieren?</h2>
@@ -465,7 +467,7 @@
        class="inline-flex items-center gap-3 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-nyxbg font-medium px-10 py-4 rounded-full shadow-gold hover:brightness-110 transition-all duration-300">
       Kostenloses Kennenlerngespräch buchen
     </a>
-    <p class="text-xs text-gray-500 mt-6">Unverbindlich · 20 Minuten · Absolut diskret</p>
+    <p class="text-xs text-gray-500 mt-6">Unverbindlich · 30 Minuten · Absolut diskret</p>
   </div>
 </section>
 </main>
