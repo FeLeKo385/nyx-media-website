@@ -141,6 +141,34 @@
   @media (prefers-reduced-motion: reduce) {
     .marquee-track { animation: none; }
   }
+  .hero-marquee-wrap {
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .hero-marquee-track {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    animation: heroMarqueeScroll 38s linear infinite;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: rgba(37,99,235,0.32);
+    line-height: 1;
+  }
+  .hero-marquee-track span {
+    padding: 0 4rem;
+  }
+  @keyframes heroMarqueeScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-marquee-track { animation: none; }
+  }
 </style>
 </head>
 <body class="bg-nyxbg text-gray-700 font-sans antialiased" style="overflow-x:hidden;">
@@ -214,7 +242,7 @@
     <path d="M250 60 A150 150 0 1 0 250 340 A115 115 0 1 1 250 60 Z" fill="url(#heroMoonGrad)"/>
   </svg>
   <div class="max-w-5xl mx-auto text-center relative z-10">
-    <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-gold/90 mb-6">Premium Creator Management für den DACH-Raum</p>
+    <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-gold/90 mb-6">Premium Creator Management für die führenden Plattformen</p>
     <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-gray-900 mb-8">
       Dein Postfach schläft nie.<br class="hidden sm:block">
       <span class="gold-gradient-text">Dein Umsatz auch nicht.</span>
@@ -223,25 +251,6 @@
       Nyx Media übernimmt das professionelle 24/7 Chat-Management für etablierte Content Creator —
       diskret, markenkonform und zu 100&nbsp;% erfolgsbasiert. Keine Fixkosten. Keine Vertragsbindung.
     </p>
-    <div class="mb-10">
-      <p class="text-xs uppercase tracking-[0.3em] text-gray-400 mb-5">Wir betreuen Creator auf den führenden Plattformen</p>
-      <div class="marquee-wrap max-w-2xl mx-auto">
-        <div class="marquee-track gap-12 items-center pr-12">
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap">OnlyFans</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap">Fansly</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap">Fanvue</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap">LoyalFans</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap">FanCentro</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap">ManyVids</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap" aria-hidden="true">OnlyFans</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap" aria-hidden="true">Fansly</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap" aria-hidden="true">Fanvue</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap" aria-hidden="true">LoyalFans</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap" aria-hidden="true">FanCentro</span>
-          <span class="font-serif text-xl text-gray-400 whitespace-nowrap" aria-hidden="true">ManyVids</span>
-        </div>
-      </div>
-    </div>
     <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-9 text-sm text-gray-600">
       <span class="inline-flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>100% erfolgsbasiert</span>
       <span class="inline-flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-gold" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Keine Vertragsbindung</span>
@@ -254,6 +263,12 @@
       <a href="#leistungen" class="w-full sm:w-auto border border-nyxborder text-gray-700 px-8 py-4 rounded-full hover:border-gold hover:text-gold transition-all duration-300 text-center">
         Unsere Leistungen
       </a>
+    </div>
+  </div>
+  <div class="hero-marquee-wrap relative z-10 mt-16" aria-hidden="true">
+    <div class="hero-marquee-track">
+      <span>OnlyFans</span><span>Fansly</span><span>Fanvue</span><span>LoyalFans</span><span>FanCentro</span><span>ManyVids</span>
+      <span>OnlyFans</span><span>Fansly</span><span>Fanvue</span><span>LoyalFans</span><span>FanCentro</span><span>ManyVids</span>
     </div>
   </div>
 </section>
@@ -462,50 +477,43 @@
       <div class="reveal reveal-blur flex gap-4">
         <span class="text-gold text-xl">◆</span>
         <div>
-          <h4 class="text-gray-900 font-medium mb-1">100% muttersprachliches DACH-Team</h4>
-          <p class="text-sm text-gray-600 leading-relaxed">Ausschließlich geschulte, deutschsprachige Muttersprachler aus Deutschland, Österreich und der Schweiz — für Kommunikation auf hohem sprachlichem Niveau statt generischer Textbausteine.</p>
+          <h4 class="text-gray-900 font-medium mb-1">Muttersprachliches Team</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">Ausschließlich geschulte, deutschsprachige Muttersprachler statt austauschbarer Textbausteine.</p>
         </div>
       </div>
       <div class="reveal reveal-blur flex gap-4" style="transition-delay:0.06s">
         <span class="text-gold text-xl">◆</span>
         <div>
           <h4 class="text-gray-900 font-medium mb-1">Absolute Diskretion</h4>
-          <p class="text-sm text-gray-600 leading-relaxed">Jede Zusammenarbeit unterliegt strikter Vertraulichkeit — auf Wunsch mit gesonderter NDA.</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Jede Zusammenarbeit unterliegt strikter Vertraulichkeit, auf Wunsch mit gesonderter NDA.</p>
         </div>
       </div>
       <div class="reveal reveal-blur flex gap-4" style="transition-delay:0.12s">
         <span class="text-gold text-xl">◆</span>
         <div>
-          <h4 class="text-gray-900 font-medium mb-1">Geschultes Chat-Team</h4>
-          <p class="text-sm text-gray-600 leading-relaxed">Unsere Mitarbeitenden werden gezielt auf deine Persona, Tonalität und Zielgruppe eingelernt.</p>
+          <h4 class="text-gray-900 font-medium mb-1">Volle Kontrolle</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">Klare Guidelines und laufende Abstimmung — du bestimmst jederzeit die Richtung.</p>
         </div>
       </div>
       <div class="reveal reveal-blur flex gap-4" style="transition-delay:0.18s">
         <span class="text-gold text-xl">◆</span>
         <div>
-          <h4 class="text-gray-900 font-medium mb-1">Volle Kontrolle</h4>
-          <p class="text-sm text-gray-600 leading-relaxed">Klare Guidelines, laufende Abstimmung und transparentes Reporting — du bestimmst die Richtung.</p>
+          <h4 class="text-gray-900 font-medium mb-1">Faire Provision</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">Reine Erfolgsbeteiligung am Mehrumsatz, keine Fixkosten, keine versteckten Gebühren.</p>
         </div>
       </div>
       <div class="reveal reveal-blur flex gap-4" style="transition-delay:0.24s">
         <span class="text-gold text-xl">◆</span>
         <div>
-          <h4 class="text-gray-900 font-medium mb-1">Faire Provision</h4>
-          <p class="text-sm text-gray-600 leading-relaxed">Reine Erfolgsbeteiligung am Mehrumsatz — keine Fixkosten, keine versteckten Gebühren.</p>
+          <h4 class="text-gray-900 font-medium mb-1">Keine Vertragsbindung</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">Du kannst die Zusammenarbeit jederzeit beenden, ohne Kündigungsfristen oder Fußnoten.</p>
         </div>
       </div>
       <div class="reveal reveal-blur flex gap-4" style="transition-delay:0.3s">
         <span class="text-gold text-xl">◆</span>
         <div>
-          <h4 class="text-gray-900 font-medium mb-1">Keine Vertragsbindung</h4>
-          <p class="text-sm text-gray-600 leading-relaxed">Du kannst die Zusammenarbeit jederzeit beenden — ohne Kündigungsfristen oder Fußnoten.</p>
-        </div>
-      </div>
-      <div class="reveal reveal-blur flex gap-4" style="transition-delay:0.36s">
-        <span class="text-gold text-xl">◆</span>
-        <div>
           <h4 class="text-gray-900 font-medium mb-1">DSGVO-konform</h4>
-          <p class="text-sm text-gray-600 leading-relaxed">Datenverarbeitung nach europäischen Datenschutzstandards — sauber, dokumentiert, sicher.</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Datenverarbeitung nach europäischen Datenschutzstandards, sauber und dokumentiert.</p>
         </div>
       </div>
     </div>
